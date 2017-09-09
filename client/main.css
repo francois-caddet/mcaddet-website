@@ -1,1 +1,49 @@
-/* CSS declarations go here */
+body{
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+}
+
+header{
+	width:100%;
+}
+nav div{
+	height:100%;
+	width:5em;
+}
+nav.illu, nav.graph{
+	width:50%;
+	height:5em;
+	background-color:rgba(0,0,0,0);
+}
+
+.illu, .illu svg{
+	float:left;
+	text-align:left;
+}
+
+.graph, .graph svg{
+	float:right;
+	text-align:right;
+}		
+
+.illu svg polygon{
+	fill: green;
+}
+
+.graph svg polygon{
+	fill: red;
+}
+
+nav h1{
+	margin:0;
+}
+
+nav.illu h1{
+	background-color:green;
+}
+
+nav.graph h1{
+	background-color:red;
+}
