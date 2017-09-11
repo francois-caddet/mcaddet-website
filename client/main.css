@@ -1,49 +1,99 @@
-body{
+
+
+body, html{
+	position:absolute;
 	padding:0;
 	margin:0;
-	height:100%;
 	width:100%;
+	height:100%;
+	overflow: hidden;
+	background-image: url("bg.jpg");
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 }
 
 header{
+	position:absolute;
 	width:100%;
-}
-nav div{
-	height:100%;
-	width:5em;
-}
-nav.illu, nav.graph{
-	width:50%;
 	height:5em;
-	background-color:rgba(0,0,0,0);
+	top:0;
 }
 
-.illu, .illu svg{
+footer{
+	position:absolute;
+	height:5em;
+	width:100%;
+	bottom:0;
+}
+
+nav{
+	width:50%;
+	height:100%;
+}
+
+nav.illu{
 	float:left;
-	text-align:left;
 }
 
-.graph, .graph svg{
+nav.graph{
 	float:right;
-	text-align:right;
-}		
-
-.illu svg polygon{
-	fill: green;
 }
 
-.graph svg polygon{
-	fill: red;
+div.illu, div.graph{
+	height:4em;
+	display: -webkit-flex;
+	display: flex;
+}
+div.illu{
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+}
+div.graph{
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
 }
 
+.illu polygon{
+	fill: #003300;
+}
+
+.graph polygon{
+	fill: #330000;
+}
+text{
+	fill:#cccccc;
+}
 nav h1{
 	margin:0;
+	padding:0.8em;
+	color:#ddd;
 }
-
-nav.illu h1{
+.illu h1{
+	text-align:left;
 	background-color:green;
 }
-
-nav.graph h1{
+.graph h1{
+	text-align:right;
 	background-color:red;
+}
+
+.upTB polygon{
+	transform: rotateX(180deg) translateY(-100%);
+
+}
+
+.downTB a:hover polygon{
+	stroke:#cccc55;
+	stroke-width:0.02;
+	stroke-dasharray:0.1 0.2;
+	stroke-linecap:round
+	fill-opacity:10%;
+}
+
+.downTB, .upTB {
+	height:100%;
+	margin:0;
+	padding:0;
 }

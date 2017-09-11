@@ -1,3 +1,4 @@
+import { Illus, Graphs } from '../api/domains.js';
 import './triangleButton.html';
 
 Template.triangleButton.onCreated(function helloOnCreated() {

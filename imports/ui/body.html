@@ -3,15 +3,28 @@
 	<nav class="illu">
 		<h1> Illustrations </h1>
 		<div class="illu">
+			{{#each illus}}
+			<div class="downTB">
 			{{> triangleButton}}
+			</div>
+			{{/each}}
 		</div>
 	</nav>
 	<nav class="graph">
 		<h1> Graphisme </h1>
 		<div class="graph">
+			{{#each graphs}}
+			<div class="downTB">
 			{{> triangleButton}}
+			</div>
+			{{/each}}
 		</div>
 	</nav>
 	</header>
+	<footer>
+		<div class="upTB">
+		{{> triangleButton}}
+		</div>
+	</footer>
 		
 </body>

@@ -1,8 +1,19 @@
 <template name="triangleButton">
-	<svg width="100%" viewBox="0,0 100,100" preserveAspectRatio="none">
-		<a xlink:href="_blank" target="_blank">		
-			<polygon points="0,0 100,0 50,100"/>
-		<text x="20" y="20" fill="black">Click Me</text>
+	<svg height="100%" width="100%" enable-background="new">
+		<defs>
+			<filter id="light">
+			<feGaussianBlur result="alphaOut" in="SourceAlpha" stdDeviation="4"/>
+			<feSpecularLighting in="alphaOut" result="specOut" specularExponent="20" lighting-color="#bbbbbb">
+			<fePointLight x="100" y="30" z="60"/>
+			</feSpecularLighting>
+			<feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+			</filter>
+		</defs>
+		<a xlink:href="_blank" target="_blank" >		
+			<svg height="100%" width="100%" viewBox="0,0 1,1" preserveAspectRatio="none" > 
+				<polygon points="0,0 1,0 0.5,1" stroke-width="0.01" stroke="black" />
+			</svg>
+			<text x="50%" y="22px" text-anchor="middle" font-size="20px" fill="black">{{name}}</text>
 		</a>
 	</svg>
 </template>
